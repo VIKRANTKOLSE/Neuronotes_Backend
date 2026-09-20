@@ -10,4 +10,5 @@ class PredictionRequest(BaseModel):
 class PredictResponse(BaseModel):
     prediction:int
     probability:Annotated[float,Field(ge=0,le=1)]
+    next_best_qid:int
 
